@@ -1,0 +1,38 @@
+# Site Settings
+title: Ishaan Barrett
+description: >-
+  Public policy and urban affairs researcher, legal analyst and consultant. Columbia University.
+url: "https://ishaanbarrett.com"
+baseurl: ""
+
+# Build Settings
+markdown: kramdown
+permalink: pretty
+sass:
+  style: compressed
+
+# Collections
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# Excludes
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap

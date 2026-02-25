@@ -1,0 +1,18 @@
+---
+layout: default
+title: Talks
+---
+
+<div class="page-header">
+  <h1>Invited Talks &amp; Hosted Panels</h1>
+</div>
+
+<div class="section-block">
+  {% for talk in site.data.talks.talks %}
+  <div class="talk-item">
+    <div class="talk-date">{{ talk.date }}</div>
+    <div class="talk-title">"{{ talk.title }}"</div>
+    <div class="talk-venue">{{ talk.venue }}{% if talk.role %} · {{ talk.role }}{% endif %}</div>
+  </div>
+  {% endfor %}
+</div>

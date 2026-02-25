@@ -1,0 +1,116 @@
+---
+layout: default
+title: Publications
+---
+
+<div class="page-header">
+  <h1>Publications</h1>
+  <p class="page-subtitle">Journal articles, working papers, policy memoranda, and editorials</p>
+</div>
+
+<!-- Peer-Reviewed Research Articles -->
+<div class="section-block">
+  <h2>Peer-Reviewed Research Articles</h2>
+  {% for pub in site.data.publications.peer_reviewed %}
+  <div class="pub-item {% if pub.status == 'forthcoming' %}forthcoming{% endif %}">
+    <div class="pub-title">
+      "{{ pub.title }}"
+      {% if pub.status == 'forthcoming' %}<span class="pub-status">Forthcoming</span>{% endif %}
+    </div>
+    <div class="pub-authors">{{ pub.authors }}</div>
+    <div class="pub-journal">
+      {% if pub.url %}<a href="{{ pub.url }}">{% endif %}
+      <em>{{ pub.journal }}</em>{% if pub.venue %}, {{ pub.venue }}{% endif %}{% if pub.issue %}, {{ pub.issue }}{% endif %}
+      {% if pub.url %}</a>{% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<!-- Working Papers in Political Science -->
+<div class="section-block">
+  <h2>Working Papers in Political Science</h2>
+  {% for pub in site.data.publications.working_papers %}
+  <div class="pub-item">
+    <div class="pub-title">"{{ pub.title }}"</div>
+    <div class="pub-authors">{{ pub.authors }}</div>
+    <div class="pub-journal">
+      {% if pub.url %}<a href="{{ pub.url }}">{% endif %}
+      <em>{{ pub.venue }}</em>, {{ pub.date }}
+      {% if pub.url %}</a>{% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<!-- Edited Magazine Articles -->
+<div class="section-block">
+  <h2>Edited Magazine Articles</h2>
+  {% for pub in site.data.publications.magazine_articles %}
+  <div class="pub-item {% if pub.status == 'forthcoming' %}forthcoming{% endif %}">
+    <div class="pub-title">
+      "{{ pub.title }}"
+      {% if pub.status == 'forthcoming' %}<span class="pub-status">Forthcoming</span>{% endif %}
+    </div>
+    <div class="pub-authors">{{ pub.authors }}</div>
+    <div class="pub-journal">
+      {% if pub.url %}<a href="{{ pub.url }}">{% endif %}
+      <em>{{ pub.journal }}</em>{% if pub.venue %}, {{ pub.venue }}{% endif %}{% if pub.issue %}, {{ pub.issue }}{% endif %}
+      {% if pub.url %}</a>{% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<!-- Policy Memoranda and Analyses -->
+<div class="section-block">
+  <h2>Policy Memoranda and Analyses</h2>
+  {% for pub in site.data.publications.policy %}
+  <div class="pub-item">
+    <div class="pub-title">"{{ pub.title }}"</div>
+    <div class="pub-authors">{{ pub.authors }}</div>
+    <div class="pub-journal">
+      {% if pub.url %}<a href="{{ pub.url }}">{% endif %}
+      {% if pub.journal %}<em>{{ pub.journal }}</em>{% endif %}{% if pub.venue %}<em>{{ pub.venue }}</em>{% endif %}{% if pub.issue %}, {{ pub.issue }}{% endif %}{% if pub.date %}, {{ pub.date }}{% endif %}
+      {% if pub.url %}</a>{% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<!-- Political Commentary -->
+<div class="section-block">
+  <h2>Political Commentary</h2>
+  {% for pub in site.data.publications.political_commentary %}
+  <div class="editorial-item">
+    <div>
+      <span class="editorial-title">
+        {% if pub.url %}<a href="{{ pub.url }}">{% endif %}
+        "{{ pub.title }}"
+        {% if pub.url %}</a>{% endif %}
+      </span>
+      <span class="editorial-pub"> — <em>{{ pub.publication }}</em></span>
+      {% if pub.note %}<span class="editorial-pub">, {{ pub.note }}</span>{% endif %}
+    </div>
+    <span class="editorial-date">{{ pub.date }}</span>
+  </div>
+  {% endfor %}
+</div>
+
+<!-- Columns and Editorials -->
+<div class="section-block">
+  <h2>Columns and Editorials</h2>
+  {% for pub in site.data.publications.editorials %}
+  <div class="editorial-item">
+    <div>
+      <span class="editorial-title">
+        {% if pub.url %}<a href="{{ pub.url }}">{% endif %}
+        "{{ pub.title }}"
+        {% if pub.url %}</a>{% endif %}
+      </span>
+      <span class="editorial-pub"> — <em>{{ pub.publication }}</em></span>
+    </div>
+    <span class="editorial-date">{{ pub.date }}</span>
+  </div>
+  {% endfor %}
+</div>

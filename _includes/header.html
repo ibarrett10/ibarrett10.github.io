@@ -1,0 +1,16 @@
+<header class="site-header">
+  <div class="header-inner">
+    <a href="{{ '/' | relative_url }}" class="site-title">Ishaan Barrett</a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+    </button>
+    <nav class="site-nav" role="navigation">
+      <a href="{{ '/' | relative_url }}" class="nav-link {% if page.url == '/' %}active{% endif %}">About</a>
+      <a href="{{ '/cv/' | relative_url }}" class="nav-link {% if page.url == '/cv/' %}active{% endif %}">CV</a>
+      <a href="{{ '/publications/' | relative_url }}" class="nav-link {% if page.url == '/publications/' %}active{% endif %}">Publications</a>
+      <a href="{{ '/talks/' | relative_url }}" class="nav-link {% if page.url == '/talks/' %}active{% endif %}">Talks</a>
+      <a href="{{ '/contact/' | relative_url }}" class="nav-link {% if page.url == '/contact/' %}active{% endif %}">Contact</a>
+    </nav>
+  </div>
+</header>
